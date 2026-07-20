@@ -16,11 +16,12 @@ class Solution {
 
         int temp = len - k;
         for(int i = 0;i < n;i++){
-            list.add(new ArrayList<>());
+            List<Integer> row = new ArrayList<>();
             for(int j = 0;j < m;j++){
-                list.get(i).add(arr[temp % len]);
+                row.add(arr[temp % len]);
                 temp++;
             }
+            list.add(row);
         }
         return list;
     }
