@@ -7,13 +7,9 @@ class Solution {
 
         while(right < n){
             char c = s.charAt(right);
-            if(!map.containsKey(c)){
-                cnt = Math.max(cnt, right-left+1);
-            }else {
-                int temp = map.get(c)+1;
-                for(;left < temp;left++) map.remove(s.charAt(left));
-            }
+            if(map.containsKey(c)) left = Math.max(left, map.get(c)+1);
             map.put(c, right);
+            cnt = Math.max(cnt, (right-left+1));
             right++;
         }
         return cnt;
