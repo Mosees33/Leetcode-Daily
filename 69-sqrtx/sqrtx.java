@@ -3,7 +3,7 @@ class Solution {
         if(x == 0) return 0;
         if(x <= 3) return 1;
         long i = 2;
-        while(i < x){
+        while(i <= x/2){
             if(i*i == (long)x) return (int)i;
             if(i*i > (long)x) break;
             i++;
