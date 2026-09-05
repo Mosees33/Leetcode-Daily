@@ -10,6 +10,6 @@ class Solution {
 
             else if(mid != n-1 && nums[mid+1] > nums[mid]) l = mid+1;
         }
-        return -2;
+        return -1;
     }
 }
